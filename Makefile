@@ -1,7 +1,3 @@
-# main: main.o
-# 	g++ -c -Wall main.cpp game.cpp creature.cpp
-# 	g++ main.o game.o creature.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system
-# 	./sfml-app
 GPP = g++
 NAME = sfml-app
 LINKER_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system

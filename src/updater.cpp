@@ -32,12 +32,10 @@ void Updater::update_player(Player* player, std::vector<Enemy*>& enemies, std::v
         switch (player->is_collision(enemies[i]))
         {
             case 1:
-                // std::cout << "Punkt dla ciebie" << std::endl;
                 player->grow(enemies[i]->get_radius());
                 enemies.erase(enemies.begin() + i);
                 break;
             case 2:
-                // std::cout << "Przegranko!" << std::endl;
                 this->text.set_text("PRZEGRANKO", 100, screen_width, screen_height, sf::Color::Black);
                 player->kill();
                 break;
