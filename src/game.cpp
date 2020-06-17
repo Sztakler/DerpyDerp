@@ -19,7 +19,7 @@ void Game::initialize_variables()
 
     float x = rand() % screen_width;
     float y = rand() % screen_height;
-    this->player = new Player(25.f, 5.0, sf::Color::White, sf::Color::Blue);
+    this->player = Player::get_instance();
     this->player->setPosition(x, y);
 
     
