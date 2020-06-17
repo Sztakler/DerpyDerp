@@ -6,7 +6,7 @@
 
 /* 
 Klasa realizuje wzorzec projektowy Singleton. Zawiera prywatne konstruktory, używane tylko raz do utworzenia pola 
-"instance", przechowującego pojedynczą instancję klasy. Metoda "get_instance()" zwraca wskaźnik do tej instancji.
+"player_instance", przechowującego pojedynczą instancję klasy. Metoda "get_instance()" zwraca wskaźnik do tej instancji.
 */
 
 class Player : public Entity
