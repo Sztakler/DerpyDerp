@@ -7,20 +7,17 @@
 #include "entity.hpp"
 #include "updater.hpp"
 #include "renderer.hpp"
-
-/*
-    Klasa przechowujące główną funkcjonalność gry
-*/
+#include "window.hpp"
 
 class Game
 {
     
     private:
-        sf::RenderWindow* window;
-        sf::VideoMode videomode;
+        Window* window;
         sf::Event event;
         sf::Color colors[18] = 
-           {sf::Color(255, 0, 0), sf::Color(0, 255, 0), sf::Color(0, 0, 255),
+           {
+            sf::Color(255, 0, 0), sf::Color(0, 255, 0), sf::Color(0, 0, 255),
             sf::Color(255, 255, 0), sf::Color(0, 255, 255), sf::Color(255, 0, 255),
             sf::Color(0, 0, 0), sf::Color(255, 128, 0), sf::Color(102, 51, 0),
             sf::Color(200, 70, 0), sf::Color(231, 26, 173), sf::Color(102, 51, 63),
@@ -51,12 +48,10 @@ class Game
         void poll_events();
         void update();
         void render();
-
-        const bool is_window_open() const;
+    const bool is_window_open() const;
 
     private:
-        void initialize_variables();
-        void initialize_window();
+        void initialize_variables();   
     
 };
 

@@ -9,6 +9,7 @@ OBJ = $(OBJ_DIR)/main.o \
 	  $(OBJ_DIR)/enemy.o\
 	  $(OBJ_DIR)/food.o\
 	  $(OBJ_DIR)/player.o\
+	  $(OBJ_DIR)/window.o\
 	  $(OBJ_DIR)/handle_text.o\
 	  $(OBJ_DIR)/renderer.o\
 	  $(OBJ_DIR)/updater.o

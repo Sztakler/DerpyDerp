@@ -3,7 +3,7 @@
 Game::Game()
 {
     this->initialize_variables();
-    this->initialize_window();
+    this->window->initialize_window(this->FPS);
 }
 
 Game::~Game()
@@ -14,7 +14,7 @@ Game::~Game()
 void Game::initialize_variables()
 {
     srand(time(NULL));
-    this->window = nullptr;
+    this->window = new Window();
 
     float x = rand() % screen_width;
     float y = rand() % screen_height;
@@ -50,17 +50,10 @@ void Game::initialize_variables()
     }
 }
 
-void Game::initialize_window()
-{
-    this->videomode = sf::VideoMode::getDesktopMode();
-    this->window = new sf::RenderWindow(videomode, "Derpy Derp", sf::Style::Fullscreen);
-    this->window->setFramerateLimit(FPS); 
-}
-
 
 void Game::poll_events()
 {
-    sf::Vector2f mouse_pos = sf::Vector2f(sf::Mouse::getPosition(*window));
+    sf::Vector2f mouse_pos = sf::Vector2f(sf::Mouse::getPosition(*this->window->get_render_window()));
    
     float player_x = player->getPosition().x;
     float player_y = player->getPosition().y;
@@ -75,15 +68,15 @@ void Game::poll_events()
 
     this->player->move(dx, dy);
 
-    while (this->window->pollEvent(this->event))
+    while (this->window->get_render_window()->pollEvent(this->event))
     {
         switch (this->event.type)
         {
             case sf::Event::Closed:
-                this->window->close();
+                this->window->get_render_window()->close();
                 break;
             case sf::Event::KeyPressed:
-                if (event.key.code == sf::Keyboard::Escape) this->window->close();
+                if (event.key.code == sf::Keyboard::Escape) this->window->get_render_window()->close();
                 break;
             default:
                 break;
@@ -99,10 +92,10 @@ void Game::update()
 
 void Game::render()
 {
-    this->renderer.render(player, enemies, food, window, this->updater.text_field.text);
+    this->renderer.render(player, enemies, food, window->get_render_window(), this->updater.text_field.text);
 }
 
 const bool Game::is_window_open() const
 {                                       
-    return this->window->isOpen();
+    return this->window->is_window_open();
 }
