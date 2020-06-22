@@ -1,6 +1,6 @@
 GPP = g++
 NAME = sfml-app
-LINKER_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system
+LINKER_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system -Wall -pedantic
 OBJ_DIR = obj
 SRC_DIR = src
 OBJ = $(OBJ_DIR)/main.o \

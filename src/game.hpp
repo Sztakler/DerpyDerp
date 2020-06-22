@@ -24,10 +24,8 @@ class Game
             sf::Color(47, 46, 23), sf::Color(255, 60, 128), sf::Color(102, 51, 255),
             sf::Color(0, 43, 150), sf::Color(200, 108, 30), sf::Color(133, 14, 100)
            };
-
-    private:
         static const int FPS = 60;
-        static const int number_of_enemies = 15;
+        static const int number_of_enemies = 12;
         static const int ammount_of_food = 20;
         static const int number_of_buffs = 5; 
         std::vector<Enemy*> enemies;

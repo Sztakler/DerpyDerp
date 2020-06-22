@@ -13,14 +13,14 @@ class Entity : public sf::Sprite
     protected:
         Entity();
         Entity(float, double, sf::Color);
-        
-        //Rysowanie kształtów umożliwione dzięki dziedziczeniu z klas bazowych SFML'a
-        //https://en.sfml-dev.org/forums/index.php?topic=18179.0
-    private:
-      virtual void draw(sf::RenderTarget&, sf::RenderStates) const = 0;
-
+  
     public:
       double speed;
+
+      //Rysowanie kształtów umożliwione dzięki dziedziczeniu z klas bazowych SFML'a
+      //https://en.sfml-dev.org/forums/index.php?topic=18179.0
+      private:
+      virtual void draw(sf::RenderTarget&, sf::RenderStates) const = 0;
 
     public:    
         float get_radius();

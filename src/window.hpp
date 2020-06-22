@@ -1,7 +1,9 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
-class Window
+class Window : sf::RenderWindow
 {
     private:
         sf::RenderWindow* render_window;

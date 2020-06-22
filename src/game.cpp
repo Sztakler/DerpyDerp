@@ -9,6 +9,9 @@ Game::Game()
 Game::~Game()
 {
     delete this->window;
+    delete this->player;
+    this->enemies.clear();
+    this->food.clear();
 }
 
 void Game::initialize_variables()

@@ -24,12 +24,12 @@ class Player : public Entity
         Player(float size, double speed, sf::Color color, sf::Color outline_color);
         Player(const Player&);
         Player& operator= (const Player&);
-        ~Player();
 
     private:
         virtual void draw(sf::RenderTarget&, sf::RenderStates) const;
     
     public:
+        ~Player();
         static Player* get_instance();
         void kill();
 };

@@ -7,10 +7,12 @@ class Food : public Entity
 {
     private:
       enum Effects {haste, slowness, increase, regular};
-      sf::Color Colors[4] {sf::Color (168, 25, 154), 
+      sf::Color Colors[4] = {
+                           sf::Color (168, 25, 154), 
                            sf::Color(210, 25, 25),
                            sf::Color(3, 179, 32),
-                           sf::Color(0, 0, 0)}; //purple, red, green, black
+                           sf::Color(0, 0, 0)
+                           }; //purple, red, green, black
       int effect;
 
     private:
