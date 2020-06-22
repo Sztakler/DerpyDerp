@@ -3,7 +3,7 @@
 
 Updater::Updater()
 {
-    this->text = HandleText();
+    this->text_field = HandleText();
 }
 
 Updater::~Updater(){}
@@ -34,9 +34,13 @@ void Updater::update_player(Player* player, std::vector<Enemy*>& enemies, std::v
             case 1:
                 player->grow(enemies[i]->get_radius());
                 enemies.erase(enemies.begin() + i);
+                if (enemies.size() == 0) 
+                {
+                    this->text_field.set_text("WYGRANKO", 100, screen_width, screen_height, sf::Color::Black);
+                }
                 break;
             case 2:
-                this->text.set_text("PRZEGRANKO", 100, screen_width, screen_height, sf::Color::Black);
+                this->text_field.set_text("PRZEGRANKO", 100, screen_width, screen_height, sf::Color::Black);
                 player->kill();
                 break;
             default: 

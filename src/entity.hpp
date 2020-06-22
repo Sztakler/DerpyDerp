@@ -10,6 +10,7 @@ class Entity : public sf::Sprite
         sf::CircleShape circle;
         sf::Color color;
 
+    protected:
         Entity();
         Entity(float, double, sf::Color);
         

@@ -26,5 +26,4 @@ class Food : public Entity
 
     public:
       Effects get_effect(); 
-
 };

@@ -18,15 +18,15 @@ void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
             target.draw(circle, states);
         }
 
-void Player::kill()
-{
-    this->circle.setRadius(0);
-}
-
 Player* Player::get_instance()
 {
     if (!player_instance) return player_instance = new Player(25.f, 5.0, sf::Color::White, sf::Color::Blue);
     return player_instance;
+}
+
+void Player::kill()
+{
+    this->circle.setRadius(0);
 }
 
 Player* Player::player_instance = nullptr;

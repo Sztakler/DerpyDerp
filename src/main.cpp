@@ -3,11 +3,9 @@
 
 int main()
 {
-    std::cout << "Miłego grania w Derpy Derpa xD" << std::endl;
-
     Game game;
 
-    while (game.is_window_open()) //60 fps 4K
+    while (game.is_window_open()) 
     {
             game.update();
             game.render();     

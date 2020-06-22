@@ -11,7 +11,6 @@ Game::~Game()
     delete this->window;
 }
 
-//Funkcje prywatne
 void Game::initialize_variables()
 {
     srand(time(NULL));
@@ -58,13 +57,9 @@ void Game::initialize_window()
     this->window->setFramerateLimit(FPS); 
 }
 
-//Funkcje publiczne
 
 void Game::poll_events()
 {
-    //-----------------------------------------------------//
-
-    // PLAYER MOVEMENT
     sf::Vector2f mouse_pos = sf::Vector2f(sf::Mouse::getPosition(*window));
    
     float player_x = player->getPosition().x;
@@ -79,8 +74,6 @@ void Game::poll_events()
     if ((mouse_pos.x - player_x) * 0.05 < -player->speed) dx = -player->speed;
 
     this->player->move(dx, dy);
-
-    //-----------------------------------------------------//
 
     while (this->window->pollEvent(this->event))
     {
@@ -106,11 +99,10 @@ void Game::update()
 
 void Game::render()
 {
-    this->renderer.render(player, enemies, food, window, this->updater.text.text);
+    this->renderer.render(player, enemies, food, window, this->updater.text_field.text);
 }
 
-    //Akcesor
-const bool Game::is_window_open() const //const member function - nie zmienia
-{                                       //wartości składowych klasy
+const bool Game::is_window_open() const
+{                                       
     return this->window->isOpen();
 }

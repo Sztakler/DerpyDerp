@@ -2,7 +2,6 @@
 #include "enemy.hpp"
 #include "food.hpp"
 
-
 class Renderer
 {
     public:

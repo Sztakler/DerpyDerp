@@ -30,7 +30,7 @@ class Game
 
     private:
         static const int FPS = 60;
-        static const int number_of_enemies = 10;
+        static const int number_of_enemies = 15;
         static const int ammount_of_food = 20;
         static const int number_of_buffs = 5; 
         std::vector<Enemy*> enemies;

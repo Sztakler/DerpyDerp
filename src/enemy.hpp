@@ -16,5 +16,4 @@ class Enemy : public Entity
         Enemy();
         Enemy(float size, double speed, sf::Color color);
         ~Enemy();
-
 };

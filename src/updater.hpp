@@ -8,11 +8,11 @@
 
 class Updater
 {
-
     public:
         static const int screen_height = 1080;
         static const int screen_width = 1920;
-        HandleText text;
+        HandleText text_field;
+
     public:
         Updater();
         ~Updater();
