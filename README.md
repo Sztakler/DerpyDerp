@@ -3,9 +3,9 @@ Simple Agar.io inspired game made in C++ for my college project.
 
 # Game screenshots
 
-![](https://github.com/Sztakler/Images/blob/master/Images/Zrzut%20ekranu%20z%202020-06-09%2013-19-38.jpg)
+![](https://cdn.discordapp.com/attachments/628850852697866260/727086340700635166/Zrzut_ekranu_z_2020-06-09_13-30-45.png)
 
-![](https://github.com/Sztakler/Images/blob/master/Images/Zrzut%20ekranu%20z%202020-06-09%2013-19-45.jpg)
+![](https://cdn.discordapp.com/attachments/628850852697866260/727086338888695839/Zrzut_ekranu_z_2020-06-09_13-30-58.png)
 
 # How to run
 Requires SFML library for C++.
